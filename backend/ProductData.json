@@ -1,0 +1,177 @@
+[
+    {
+        "id": 1,
+        "name": "Wireless Keyboard",
+        "image": "keyboard.jpg",
+        "description": "A compact wireless keyboard with long battery life.",
+        "category": "Electronics"
+    },
+    {
+        "id": 2,
+        "name": "Running Shoes",
+        "image": "shoes.jpg",
+        "description": "Lightweight and comfortable running shoes suitable for all terrains.",
+        "category": "Footwear"
+    },
+    {
+        "id": 3,
+        "name": "Ceramic Mug",
+        "image": "mug.jpg",
+        "description": "A 350ml ceramic mug perfect for coffee or tea.",
+        "category": "Home & Kitchen"
+    },
+    {
+        "id": 4,
+        "name": "Gaming Mouse",
+        "image": "mouse.jpg",
+        "description": "An ergonomic gaming mouse with customizable buttons.",
+        "category": "Electronics"
+    },
+    {
+        "id": 5,
+        "name": "Cookware Set",
+        "image": "cookware.jpg",
+        "description": "A 5-piece non-stick cookware set for all your cooking needs.",
+        "category": "Home & Kitchen"
+    },
+    {
+        "id": 6,
+        "name": "Smartphone",
+        "image": "smartphone.jpg",
+        "description": "Latest model smartphone with high-speed processing.",
+        "category": "Electronics"
+    },
+    {
+        "id": 7,
+        "name": "Backpack",
+        "image": "backpack.jpg",
+        "description": "Durable and waterproof backpack with multiple compartments.",
+        "category": "Accessories"
+    },
+    {
+        "id": 8,
+        "name": "Digital Camera",
+        "image": "camera.jpg",
+        "description": "High-resolution camera for capturing stunning images.",
+        "category": "Electronics"
+    },
+    {
+        "id": 9,
+        "name": "Sunglasses",
+        "image": "sunglasses.jpg",
+        "description": "Polarized sunglasses offering UV protection.",
+        "category": "Accessories"
+    },
+    {
+        "id": 10,
+        "name": "Yoga Mat",
+        "image": "yoga_mat.jpg",
+        "description": "Non-slip yoga mat with a cushioned surface for comfort.",
+        "category": "Fitness"
+    },
+    {
+        "id": 11,
+        "name": "Wristwatch",
+        "image": "wristwatch.jpg",
+        "description": "Stylish wristwatch with a leather band and quartz movement.",
+        "category": "Accessories"
+    },
+    {
+        "id": 12,
+        "name": "Wireless Earbuds",
+        "image": "earbuds.jpg",
+        "description": "Noise-cancelling wireless earbuds with charging case.",
+        "category": "Electronics"
+    },
+    {
+        "id": 13,
+        "name": "Electric Toothbrush",
+        "image": "toothbrush.jpg",
+        "description": "Rechargeable electric toothbrush with soft bristles.",
+        "category": "Personal Care"
+    },
+    {
+        "id": 14,
+        "name": "Bluetooth Speaker",
+        "image": "speaker.jpg",
+        "description": "Portable Bluetooth speaker with high-quality sound.",
+        "category": "Electronics"
+    },
+    {
+        "id": 15,
+        "name": "Notebook",
+        "image": "notebook.jpg",
+        "description": "Hardcover notebook with 200 lined pages.",
+        "category": "Stationery"
+    },
+    {
+        "id": 16,
+        "name": "Desk Lamp",
+        "image": "lamp.jpg",
+        "description": "Adjustable desk lamp with LED lighting.",
+        "category": "Home & Office"
+    },
+    {
+        "id": 17,
+        "name": "T-shirt",
+        "image": "tshirt.jpg",
+        "description": "Cotton T-shirt available in various colors.",
+        "category": "Clothing"
+    },
+    {
+        "id": 18,
+        "name": "Kitchen Knife Set",
+        "image": "knife_set.jpg",
+        "description": "Stainless steel kitchen knife set with 5 pieces.",
+        "category": "Home & Kitchen"
+    },
+    {
+        "id": 19,
+        "name": "Tablet",
+        "image": "tablet.jpg",
+        "description": "Lightweight tablet with high-resolution display.",
+        "category": "Electronics"
+    },
+    {
+        "id": 20,
+        "name": "Power Bank",
+        "image": "power_bank.jpg",
+        "description": "Portable power bank with fast charging capabilities.",
+        "category": "Electronics"
+    },
+    {
+        "id": 21,
+        "name": "Water Bottle",
+        "image": "water_bottle.jpg",
+        "description": "Insulated water bottle keeping drinks hot or cold for hours.",
+        "category": "Sports & Outdoors"
+    },
+    {
+        "id": 22,
+        "name": "Gaming Chair",
+        "image": "gaming_chair.jpg",
+        "description": "Ergonomic gaming chair with adjustable height and recline.",
+        "category": "Furniture"
+    },
+    {
+        "id": 23,
+        "name": "Headphones",
+        "image": "headphones.jpg",
+        "description": "Over-ear headphones with noise isolation.",
+        "category": "Electronics"
+    },
+    {
+        "id": 24,
+        "name": "Cookbook",
+        "image": "cookbook.jpg",
+        "description": "Recipe book featuring 100 easy and delicious meals.",
+        "category": "Books"
+    },
+    {
+        "id": 25,
+        "name": "Smartwatch",
+        "image": "smartwatch.jpg",
+        "description": "Smartwatch with fitness tracking and notifications.",
+        "category": "Electronics"
+    }
+]
