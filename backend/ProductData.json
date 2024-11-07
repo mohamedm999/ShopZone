@@ -181,7 +181,8 @@
         "image": "headphones.jpg",
         "description": "Over-ear headphones with noise isolation.",
         "category": "Electronics",
-        "price": 39.99
+        "price": 39.99,
+        "newCollection": true
     },
     {
         "id": 24,
@@ -189,7 +190,8 @@
         "image": "cookbook.jpg",
         "description": "Recipe book featuring 100 easy and delicious meals.",
         "category": "Books",
-        "price": 12.99
+        "price": 12.99,
+        "newCollection": true
     },
     {
         "id": 25,
@@ -197,6 +199,7 @@
         "image": "smartwatch.jpg",
         "description": "Smartwatch with fitness tracking and notifications.",
         "category": "Electronics",
-        "price": 89.99
+        "price": 89.99,
+        "newCollection": true
     }
 ]
