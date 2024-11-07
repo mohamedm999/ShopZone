@@ -1,20 +1,16 @@
+async function loadProducts() {
+  try {
+    const response = await fetch("/backend/ProductData.json");
+    const products = await response.json();
 
-  async function loadProducts() {
-    try {
-      const response = await fetch('/backend/ProductData.json'); 
-      const products = await response.json();
-      
-      const container = document.getElementById('product-container');
+    const container = document.getElementById("product-container");
 
-      
-      products.forEach(product => {
+    products.forEach((product) => {
+      if (product.newCollection) {
+        const card = document.createElement("div");
+        card.className =
+          "flex flex-col md:flex-row justify-center items-center gap-4 p-4";
 
-        if (product.newCollection) {
-            
-            
-        const card = document.createElement('div');
-        card.className = "flex flex-col md:flex-row justify-center items-center gap-4 p-4";
-        
         card.innerHTML = `
         <div class="bg-white shadow-lg rounded-lg p-4 w-80 relative">
         <!-- Favorite Icon -->
@@ -22,7 +18,7 @@
             <i class="fas fa-heart"><img src="/frontend/src/assets/images/icons/favorite.png" alt=""></i>
         </button>
         <!-- Product Image -->
-        <img src="https://via.placeholder.com/150" alt="${product.name}" class="rounded-lg w-full h-40 object-cover">
+        <img src="${product.img}" alt="${product.name}" class="rounded-lg w-full h-40 object-cover">
         <!-- Product Info -->
         <div class="mt-4">
             <h2 class="text-lg font-semibold">${product.name}</h2>
@@ -39,13 +35,11 @@
         `;
 
         container.appendChild(card);
-        }
-  
-        
-      });
-    } catch (error) {
-      console.error("Failed to load products:", error);
-    }
+      }
+    });
+  } catch (error) {
+    console.error("Failed to load products:", error);
   }
+}
 
-  document.addEventListener('DOMContentLoaded', loadProducts);
+document.addEventListener("DOMContentLoaded", loadProducts);
