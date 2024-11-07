@@ -1,13 +1,17 @@
 
-  // Fetch the product data and render cards
   async function loadProducts() {
     try {
-      const response = await fetch('/backend/ProductData.json'); // Adjust path as needed
+      const response = await fetch('/backend/ProductData.json'); 
       const products = await response.json();
       
       const container = document.getElementById('product-container');
 
+      
       products.forEach(product => {
+
+        if (product.newCollection) {
+            
+            
         const card = document.createElement('div');
         card.className = "flex flex-col md:flex-row justify-center items-center gap-4 p-4";
         
@@ -35,11 +39,13 @@
         `;
 
         container.appendChild(card);
+        }
+  
+        
       });
     } catch (error) {
       console.error("Failed to load products:", error);
     }
   }
 
-  // Load products when the page loads
   document.addEventListener('DOMContentLoaded', loadProducts);
