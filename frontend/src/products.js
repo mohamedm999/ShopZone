@@ -9,6 +9,8 @@ async function getProducts() {
         const data = await res.json();
         data.map(item => dataProduct.push(item));
         localStorage.setItem('data' , JSON.stringify(dataProduct))
+        let cardArr = [] ;
+        localStorage.setItem("card", JSON.stringify(cardArr));
     } catch (error) {
         console.log('Error fetching data:', error);
     }
@@ -64,8 +66,8 @@ async function loadProducts() {
             <p class="text-gray-600 mt-1">$${product.price}</p>
         </div>
         <!-- Add to Cart Button with Icon, Positioned to the Right -->
-        <div class="mt-4 flex justify-end">
-            <button class="flex items-center space-x-2 bg-yellow-400 text-black px-3 py-1 rounded-md hover:bg-yellow-600 transition duration-300 text-sm ">
+        <div class="mt-4 flex justify-end ">
+            <button class="flex items-center space-x-2 bg-yellow-400 text-black px-3 py-1 rounded-md hover:bg-yellow-600 transition duration-300 text-sm " onclick="addToCard(${product.id})" >
                 <i class="fas fa-shopping-cart w-5"><img src="/frontend/src/assets/images/icons/shopping-bag.png" alt=""></i>
                 <span>Add</span>
             </button>
