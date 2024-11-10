@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../output.css">
+  <link href="/frontend/src/input.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <title>profuct</title>
+</head>
+
+<body class="bg-gray-800">
+  <!-- Navbar -->
+  <nav class="bg-gray-800 p-4 flex justify-between items-center">
+    <!-- Left Side: Logo and Search Input -->
+    <div class="flex items-center space-x-4">
+      <!-- Logo -->
+      <div class="text-white font-bold text-lg">
+        <span>ShopZone</span>
+      </div>
+      <!-- Search Input -->
+      <div class="relative">
+        <input type="text" class="p-2 pl-10 rounded-full bg-gray-700 text-white " placeholder="  Search..." />
+        <i class="fas fa-search absolute left-3 top-2 text-white"><img class="w-6"
+            src="/frontend/src/assets/images/icons/magnifying-glass.png" alt=""></i>
+      </div>
+    </div>
+
+    <!-- Right Side: Shopping and Favorites Icons -->
+    <div class="flex items-center space-x-4">
+      <!-- Shopping Icon with Counter -->
+      <a class="relative" href="./assets/pages/basket.html">
+        <i class="fas fa-shopping-cart text-white text-xl p"><img class="w-10"
+            src="/frontend/src/assets/images/icons/shopping-cart.png" alt=""></i>
+        <span
+          class="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center">0</span>
+      </a>
+      <!-- Favorites Icon with Counter -->
+      <a class="relative" href="./assets/pages/favorite.html">
+        <i class="fas fa-heart text-white text-xl"><img class="w-9"
+            src="/frontend/src/assets/images/icons/heart (2).png" alt=""></i>
+        <span
+          class="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center">0</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Subbar -->
+  <div class="bg-gray-700 p-2">
+    <div class="flex space-x-10 justify-center">
+      <a href="index.html" class="text-white hover:text-gray-400">Home</a>
+      <a href="#" class="text-white hover:text-gray-400">Product Listing</a>
+      <a href="#" class="text-white hover:text-gray-400">Product Categories</a>
+      <a href="#" class="text-white hover:text-gray-400">About Us</a>
+      <a href="#" class="text-white hover:text-gray-400">Contact</a>
+    </div>
+  </div>
+
+  <!-- filter barr -->
+  <div class="w-full py-5 flex justify-end gap-4">
+    <div class="px-5">
+
+      <select id="optionsCategoris" class="px-3 py-1.5 mx-3  bg-gray-800 text-white rounded-lg border-gray-700 border-solid border-2 font-bold">
+        <option value="" disabled selected hidden>Categories</option>
+      </select>
+
+      <select id="optionsPrice" class="px-3 py-1.5 mx-3  bg-gray-800 text-white rounded-lg border-gray-700 border-solid border-2 font-bold">
+        <option value="" disabled selected hidden>Price Sorting</option>
+        <option value="Ascending">Ascending</option>
+        <option value="Descending">Descending</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- hero section> -->
+  <div id="product-container-filter" class=" flex flex-wrap justify-center gap-6 p-6 bg-gray-100 bg-gray-800">
+
+  </div>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-10 px-6">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between gap-8">
+      <!-- Logo and About Section -->
+      <div class="flex flex-col items-start">
+        <h2 class="text-2xl font-bold">ShopZone</h2>
+        <p class="mt-4 text-gray-400 max-w-sm">
+          Discover the latest collections of quality products and enjoy seamless shopping experiences.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="../../../sex" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Shop</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Categories</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Information -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+        <p class="text-gray-400">1234 Market St.<br>San Francisco, CA 94103</p>
+        <p class="mt-4 text-gray-400">Email: support@shopzone.com</p>
+        <p class="text-gray-400">Phone: (123) 456-7890</p>
+      </div>
+
+      <!-- Social Media Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300"><i class="fab fa-facebook"><img
+                src="/frontend/src/assets/images/icons/facebook (1).png" alt=""></i></a>
+          <a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300"><i class="fab fa-instagram"><img
+                src="/frontend/src/assets/images/icons/instagram.png" alt=""></i></a>
+          <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300"><i class="fab fa-twitter"><img
+                src="/frontend/src/assets/images/icons/twitter.png" alt=""></i></a>
+          <a href="#" class="text-gray-400 hover:text-red-600 transition duration-300"><i class="fab fa-youtube"><img
+                src="/frontend/src/assets/images/icons/youtube.png" alt=""></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+      <p>&copy; 2024 ShopZone. All rights reserved.</p>
+    </div>
+  </footer>
+
+
+
+  <script src="../../products.js"></script>
+</body>
+
+</html>
