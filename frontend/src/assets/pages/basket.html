@@ -1,245 +1,174 @@
 <!doctype html>
 <html>
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/frontend/src/input.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="/backend/ListtingofProducts.js"></script>
- 
+
 </head>
-<body class="bg-gray-800"> 
+
+<body class="bg-gray-800">
   <!-- Navbar -->
-<nav class="bg-gray-800 p-4 flex justify-between items-center">
-  <!-- Left Side: Logo and Search Input -->
-  <div class="flex items-center space-x-4">
-    <!-- Logo -->
-    <div class="text-white font-bold text-lg">
-      <span>ShopZone</span>
+  <nav class="bg-gray-800 p-4 flex justify-between items-center">
+    <!-- Left Side: Logo and Search Input -->
+    <div class="flex items-center space-x-4">
+      <!-- Logo -->
+      <div class="text-white font-bold text-lg">
+        <span>ShopZone</span>
+      </div>
+      <!-- Search Input -->
+      <div class="relative">
+        <input type="text" class="p-2 pl-10 rounded-full bg-gray-700 text-white " placeholder="  Search..." />
+        <i class="fas fa-search absolute left-3 top-2 text-white"><img class="w-6"
+            src="/frontend/src/assets/images/icons/magnifying-glass.png" alt=""></i>
+      </div>
     </div>
-    <!-- Search Input -->
-    <div class="relative">
-      <input
-        type="text"
-        class="p-2 pl-10 rounded-full bg-gray-700 text-white "
-        placeholder="  Search..."
-      />
-      <i class="fas fa-search absolute left-3 top-2 text-white"><img class="w-6" src="/frontend/src/assets/images/icons/magnifying-glass.png" alt=""></i>
+
+    <!-- Right Side: Shopping and Favorites Icons -->
+    <div class="flex items-center space-x-4">
+      <!-- Shopping Icon with Counter -->
+      <div class="relative">
+        <i class="fas fa-shopping-cart text-white text-xl p"><img class="w-10"
+            src="/frontend/src/assets/images/icons/shopping-cart.png" alt=""></i>
+        <span
+          class="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center">0</span>
+      </div>
+      <!-- Favorites Icon with Counter -->
+      <div class="relative">
+        <i class="fas fa-heart text-white text-xl"><img class="w-9"
+            src="/frontend/src/assets/images/icons/heart (2).png" alt=""></i>
+        <span
+          class="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center">0</span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Subbar -->
+  <div class="bg-gray-700 p-2">
+    <div class="flex space-x-10 justify-center">
+      <a href="/frontend/src/index.html" class="text-white hover:text-gray-400">Home</a>
+      <a href="/frontend/src/assets/pages/productList.html" class="text-white hover:text-gray-400">Product Listing</a>
+      <a href="#" class="text-white hover:text-gray-400">Product Categories</a>
+      <a href="#" class="text-white hover:text-gray-400">About Us</a>
+      <a href="#" class="text-white hover:text-gray-400">Contact</a>
     </div>
   </div>
 
-  <!-- Right Side: Shopping and Favorites Icons -->
-  <div class="flex items-center space-x-4">
-    <!-- Shopping Icon with Counter -->
-    <div class="relative">
-      <i class="fas fa-shopping-cart text-white text-xl p"><img class="w-10" src="/frontend/src/assets/images/icons/shopping-cart.png" alt=""></i>
-      <span class="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center">0</span>
-    </div>
-    <!-- Favorites Icon with Counter -->
-    <div class="relative" >
-      <i class="fas fa-heart text-white text-xl"><img class="w-9" src="/frontend/src/assets/images/icons/heart (2).png" alt=""></i>
-      <span class="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center">0</span>
-    </div>
-  </div>
-</nav>
+  <!-- my basket -->
 
-<!-- Subbar -->
-<div class="bg-gray-700 p-2">
-  <div class="flex space-x-10 justify-center">
-    <a href="#" class="text-white hover:text-gray-400">Home</a>
-    <a href="#" class="text-white hover:text-gray-400">Product Listing</a>
-    <a href="#" class="text-white hover:text-gray-400">Product Categories</a>
-    <a href="#" class="text-white hover:text-gray-400">About Us</a>
-    <a href="#" class="text-white hover:text-gray-400">Contact</a>
-  </div>
-</div>
+  <div class="container mx-auto mt-10">
+    <div class="sm:flex shadow-md my-10">
+      <div class="  w-full  sm:w-3/4 bg-white px-10 py-10" >
+        <div id="fatherContainer">
 
-<!-- my basket -->
- 
-<section class="py-24 relative">
-  <div class="w-full max-w-7xl px-4 md:px-5 lg-6 mx-auto">
-      
-          <h2 class="title font-manrope font-bold text-4xl leading-10 mb-8 text-center text-black">Shopping Cart
-          </h2>
-          <div class="rounded-3xl border-2 border-gray-200 p-4 lg:p-8 grid grid-cols-12 mb-8 max-lg:max-w-lg max-lg:mx-auto gap-y-4 ">
-              <div class="col-span-12 lg:col-span-2 img box">
-                  <img src="https://pagedone.io/asset/uploads/1701162826.png" alt="speaker image" class="max-lg:w-full lg:w-[180px] rounded-lg object-cover">
-              </div>
-              <div class="col-span-12 lg:col-span-10 detail w-full lg:pl-3">
-                  <div class="flex items-center justify-between w-full mb-4">
-                      <h5 class="font-manrope font-bold text-2xl leading-9 text-gray-900">Round white portable
-                          speaker</h5>
-                      <button class="rounded-full group flex items-center justify-center focus-within:outline-red-500">
-                          <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <circle class="fill-red-50 transition-all duration-500 group-hover:fill-red-400"
-                                  cx="17" cy="17" r="17" fill="" />
-                              <path class="stroke-red-500 transition-all duration-500 group-hover:stroke-white"
-                                  d="M14.1673 13.5997V12.5923C14.1673 11.8968 14.7311 11.333 15.4266 11.333H18.5747C19.2702 11.333 19.834 11.8968 19.834 12.5923V13.5997M19.834 13.5997C19.834 13.5997 14.6534 13.5997 11.334 13.5997C6.90804 13.5998 27.0933 13.5998 22.6673 13.5997C21.5608 13.5997 19.834 13.5997 19.834 13.5997ZM12.4673 13.5997H21.534V18.8886C21.534 20.6695 21.534 21.5599 20.9807 22.1131C20.4275 22.6664 19.5371 22.6664 17.7562 22.6664H16.2451C14.4642 22.6664 13.5738 22.6664 13.0206 22.1131C12.4673 21.5599 12.4673 20.6695 12.4673 18.8886V13.5997Z"
-                                  stroke="#EF4444" stroke-width="1.6" stroke-linecap="round" />
-                          </svg>
-                      </button>
-                  </div>
-                  <p class="font-normal text-base leading-7 text-gray-500 mb-6">
-                      Introducing our sleek round white portable speaker, the epitome of style and sound! Elevate your auditory experience with this compact yet powerful device that delivers crystal-clear audio wherever you go. <a href="javascript:;"
-                      class="text-indigo-600">More....</a>
-                  </p>
-                  <div class="flex justify-between items-center">
-                      <div class="flex items-center gap-4">
-                          <button
-                              class="group rounded-[50px] border border-gray-200 shadow-sm shadow-transparent p-2.5 flex items-center justify-center bg-white transition-all duration-500 hover:shadow-gray-200 hover:bg-gray-50 hover:border-gray-300 focus-within:outline-gray-300">
-                              <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                                  width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.5 9.5H13.5" stroke="" stroke-width="1.6" stroke-linecap="round"
-                                      stroke-linejoin="round" />
-                              </svg>
-                          </button>
-                          <input type="text" id="number"
-                              class="border border-gray-200 rounded-full w-10 aspect-square outline-none text-gray-900 font-semibold text-sm py-1.5 px-3 bg-gray-100  text-center"
-                              placeholder="2">
-                          <button
-                              class="group rounded-[50px] border border-gray-200 shadow-sm shadow-transparent p-2.5 flex items-center justify-center bg-white transition-all duration-500 hover:shadow-gray-200 hover:bg-gray-50 hover:border-gray-300 focus-within:outline-gray-300">
-                              <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                                  width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M3.75 9.5H14.25M9 14.75V4.25" stroke="" stroke-width="1.6"
-                                      stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                          </button>
-                      </div>
-                      <h6 class="text-indigo-600 font-manrope font-bold text-2xl leading-9 text-right">$220</h6>
-                  </div>
-              </div>
+        </div>
+
+        <div id="containerBasket">
+
+        </div>
+        <a href="#" class="flex font-semibold text-indigo-600 text-sm mt-10">
+          <svg class="fill-current mr-2 text-indigo-600 w-4" viewBox="0 0 448 512">
+            <path
+              d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z" />
+          </svg>
+          Continue Shopping
+        </a>
+      </div>
+      <div id="summary" class=" w-full   sm:w-1/4   md:w-1/2     px-8 py-10">
+        <h1 class="font-semibold text-2xl border-b pb-8">Order Summary</h1>
+        <div class="flex justify-between mt-10 mb-5">
+          <span class="font-semibold text-sm uppercase">Items 3</span>
+          <span class="font-semibold text-sm">590$</span>
+        </div>
+        <div>
+          <label class="font-medium inline-block mb-3 text-sm uppercase">
+            Shipping
+          </label>
+          <select class="block p-2 text-gray-600 w-full text-sm">
+            <option>Standard shipping - $10.00</option>
+          </select>
+        </div>
+        <div class="py-10">
+          <label for="promo" class="font-semibold inline-block mb-3 text-sm uppercase">
+            Promo Code
+          </label>
+          <input type="text" id="promo" placeholder="Enter your code" class="p-2 text-sm w-full" />
+        </div>
+        <button class="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">
+          Apply
+        </button>
+        <div class="border-t mt-8">
+          <div class="flex font-semibold justify-between py-6 text-sm uppercase">
+            <span>Total cost</span>
+            <span>$600</span>
           </div>
-          <div class="rounded-3xl border-2 border-gray-200 p-4 lg:p-8 grid grid-cols-12 mb-8 max-lg:max-w-lg max-lg:mx-auto gap-y-4">
-              <div class="col-span-12 lg:col-span-2 img box">
-                  <img src="https://pagedone.io/asset/uploads/1701162839.png" alt="speaker image" class="max-lg:w-full lg:w-[180px] rounded-lg object-cover">
-              </div>
-              <div class="col-span-12 lg:col-span-10 detail w-full lg:pl-3">
-                  <div class="flex items-center justify-between w-full mb-4">
-                      <h5 class="font-manrope font-bold text-2xl leading-9 text-gray-900">Gray round portable
-                          speaker</h5>
-                      <button class="rounded-full group flex items-center justify-center focus-within:outline-red-500">
-                          <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
-                              xmlns="http://www.w3.org/2000/svg">
-                              <circle class="fill-red-50 transition-all duration-500 group-hover:fill-red-400"
-                                  cx="17" cy="17" r="17" fill="" />
-                              <path class="stroke-red-500 transition-all duration-500 group-hover:stroke-white"
-                                  d="M14.1673 13.5997V12.5923C14.1673 11.8968 14.7311 11.333 15.4266 11.333H18.5747C19.2702 11.333 19.834 11.8968 19.834 12.5923V13.5997M19.834 13.5997C19.834 13.5997 14.6534 13.5997 11.334 13.5997C6.90804 13.5998 27.0933 13.5998 22.6673 13.5997C21.5608 13.5997 19.834 13.5997 19.834 13.5997ZM12.4673 13.5997H21.534V18.8886C21.534 20.6695 21.534 21.5599 20.9807 22.1131C20.4275 22.6664 19.5371 22.6664 17.7562 22.6664H16.2451C14.4642 22.6664 13.5738 22.6664 13.0206 22.1131C12.4673 21.5599 12.4673 20.6695 12.4673 18.8886V13.5997Z"
-                                  stroke="#EF4444" stroke-width="1.6" stroke-linecap="round" />
-                          </svg>
-                      </button>
-                  </div>
-                  <p class="font-normal text-base leading-7 text-gray-500 mb-6">
-                      Introducing our sleek round white portable speaker, the epitome of style and sound! Elevate your auditory experience with this compact yet powerful device that delivers crystal-clear audio wherever you go. <a href="javascript:;"
-                          class="text-indigo-600">More....</a>
-                  </p>
-                  <div class="flex justify-between items-center">
-                      <div class="flex items-center gap-4">
-                          <button
-                              class="group rounded-[50px] border border-gray-200 shadow-sm shadow-transparent p-2.5 flex items-center justify-center bg-white transition-all duration-500 hover:shadow-gray-200 hover:bg-gray-50 hover:border-gray-300 focus-within:outline-gray-300">
-                              <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                                  width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M4.5 9.5H13.5" stroke="" stroke-width="1.6" stroke-linecap="round"
-                                      stroke-linejoin="round" />
-                              </svg>
-                          </button>
-                          <input type="text" id="number"
-                              class="border border-gray-200 rounded-full w-10 aspect-square outline-none text-gray-900 font-semibold text-sm py-1.5 px-3 bg-gray-100  text-center"
-                              placeholder="3">
-                          <button
-                              class="group rounded-[50px] border border-gray-200 shadow-sm shadow-transparent p-2.5 flex items-center justify-center bg-white transition-all duration-500 hover:shadow-gray-200 hover:bg-gray-50 hover:border-gray-300 focus-within:outline-gray-300">
-                              <svg class="stroke-gray-900 transition-all duration-500 group-hover:stroke-black"
-                                  width="18" height="19" viewBox="0 0 18 19" fill="none"
-                                  xmlns="http://www.w3.org/2000/svg">
-                                  <path d="M3.75 9.5H14.25M9 14.75V4.25" stroke="" stroke-width="1.6"
-                                      stroke-linecap="round" stroke-linejoin="round" />
-                              </svg>
-                          </button>
-                      </div>
-                      <h6 class="text-indigo-600 font-manrope font-bold text-2xl leading-9 text-right">$220</h6>
-                  </div>
-              </div>
-          </div>
-          <div class="flex flex-col md:flex-row items-center md:items-center justify-between lg:px-6 pb-6 border-b border-gray-200 max-lg:max-w-lg max-lg:mx-auto">
-              <h5 class="text-gray-900 font-manrope font-semibold text-2xl leading-9 w-full max-md:text-center max-md:mb-4">Subtotal</h5>
-
-              <div class="flex items-center justify-between gap-5 ">
-                  <button
-                      class="rounded-full py-2.5 px-3 bg-indigo-50 text-indigo-600 font-semibold text-xs text-center whitespace-nowrap transition-all duration-500 hover:bg-indigo-100">Promo
-                      Code?</button>
-                  <h6 class="font-manrope font-bold text-3xl lead-10 text-indigo-600">$440</h6>
-              </div>
-          </div>
-          <div class="max-lg:max-w-lg max-lg:mx-auto">
-              <p class="font-normal text-base leading-7 text-gray-500 text-center mb-5 mt-6">Shipping taxes, and discounts
-                  calculated
-                  at checkout</p>
-              <button
-                  class="rounded-full py-4 px-6 bg-indigo-600 text-white font-semibold text-lg w-full text-center transition-all duration-500 hover:bg-indigo-700 ">Checkout</button>
-
-          </div>
-          
-      
-  </div>
-  </div>
-  </div>
-</section>
-                                                                                                                                          
-
-
-
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-10 px-6">
-  <div class="container mx-auto flex flex-col md:flex-row justify-between gap-8">
-    <!-- Logo and About Section -->
-    <div class="flex flex-col items-start">
-      <h2 class="text-2xl font-bold">ShopZone</h2>
-      <p class="mt-4 text-gray-400 max-w-sm">
-        Discover the latest collections of quality products and enjoy seamless shopping experiences.
-      </p>
-    </div>
-
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-      <ul class="space-y-2">
-        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Shop</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Categories</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Information -->
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-      <p class="text-gray-400">1234 Market St.<br>San Francisco, CA 94103</p>
-      <p class="mt-4 text-gray-400">Email: support@shopzone.com</p>
-      <p class="text-gray-400">Phone: (123) 456-7890</p>
-    </div>
-
-    <!-- Social Media Links -->
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
-      <div class="flex space-x-4">
-        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300"><i class="fab fa-facebook"><img src="/frontend/src/assets/images/icons/facebook (1).png" alt=""></i></a>
-        <a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300"><i class="fab fa-instagram"><img src="/frontend/src/assets/images/icons/instagram.png" alt=""></i></a>
-        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300"><i class="fab fa-twitter"><img src="/frontend/src/assets/images/icons/twitter.png" alt=""></i></a>
-        <a href="#" class="text-gray-400 hover:text-red-600 transition duration-300"><i class="fab fa-youtube"><img src="/frontend/src/assets/images/icons/youtube.png" alt=""></i></a>
+          <button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
+            Checkout
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
-  <!-- Footer Bottom -->
-  <div class="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
-    <p>&copy; 2024 ShopZone. All rights reserved.</p>
-  </div>
-</footer>
 
-<script href="./basket.js"></script>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-10 px-6">
+    <div class="container mx-auto flex flex-col md:flex-row justify-between gap-8">
+      <!-- Logo and About Section -->
+      <div class="flex flex-col items-start">
+        <h2 class="text-2xl font-bold">ShopZone</h2>
+        <p class="mt-4 text-gray-400 max-w-sm">
+          Discover the latest collections of quality products and enjoy seamless shopping experiences.
+        </p>
+      </div>
+
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+        <ul class="space-y-2">
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Shop</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Categories</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
+          <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Information -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+        <p class="text-gray-400">1234 Market St.<br>San Francisco, CA 94103</p>
+        <p class="mt-4 text-gray-400">Email: support@shopzone.com</p>
+        <p class="text-gray-400">Phone: (123) 456-7890</p>
+      </div>
+
+      <!-- Social Media Links -->
+      <div>
+        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300"><i class="fab fa-facebook"><img
+                src="/frontend/src/assets/images/icons/facebook (1).png" alt=""></i></a>
+          <a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300"><i class="fab fa-instagram"><img
+                src="/frontend/src/assets/images/icons/instagram.png" alt=""></i></a>
+          <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300"><i class="fab fa-twitter"><img
+                src="/frontend/src/assets/images/icons/twitter.png" alt=""></i></a>
+          <a href="#" class="text-gray-400 hover:text-red-600 transition duration-300"><i class="fab fa-youtube"><img
+                src="/frontend/src/assets/images/icons/youtube.png" alt=""></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
+      <p>&copy; 2024 ShopZone. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../../cordFunctions.js"></script>
 </body>
+
 </html>

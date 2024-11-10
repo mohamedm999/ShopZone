@@ -8,13 +8,8 @@ async function getProducts() {
         }
         const data = await res.json();
         data.map(item => dataProduct.push(item));
-<<<<<<< HEAD
         localStorage.setItem('data' , JSON.stringify(dataProduct))
-        let cardArr = [] ;
-        localStorage.setItem("card", JSON.stringify(cardArr));
-=======
-        localStorage.setItem('data', JSON.stringify(dataProduct))
->>>>>>> dev
+
     } catch (error) {
         console.log('Error fetching data:', error);
     }
