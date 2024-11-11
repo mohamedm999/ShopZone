@@ -33,9 +33,10 @@ formAddCattegory.addEventListener('submit', event => {
       } else {
         alert('Error adding category!');
       }
-
   }
+  
 )
   .catch(error => alert('Error adding category!') );
 
 })
+

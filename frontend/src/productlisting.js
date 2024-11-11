@@ -1,38 +1,3 @@
-async function getProducts() {
-    const dataProduct = [];
-    try {
-        const res = await fetch('http://localhost:3000/get-products');
-        if (!res.ok) {
-            console.log('error connect network');
-            return dataProduct;
-        }
-        const data = await res.json();
-        data.map(item => dataProduct.push(item));
-        localStorage.setItem('data' , JSON.stringify(dataProduct))
-    } catch (error) {
-        console.log('Error fetching data:', error);
-    }
-    return dataProduct;
-}
-
-getProducts()
-
-
-function adjustImageURL(img) {
-    const currentPath = window.location.pathname;
-    let basePath = '';
-
-    if (currentPath.includes('index.html')) {
-        basePath = '../src/assets/images/';
-    } else if (currentPath.includes('productsFilter.html')) {
-        basePath = '../../_assets/imgs/';
-    } else {
-        basePath = './img/'; 
-    }
-
-    return `${basePath}${img}`;
-}
-
 
 
 async function loadProducts() {
@@ -42,7 +7,6 @@ async function loadProducts() {
       const container = document.getElementById('product-listing');
       
       products.forEach(product => {
-        let URLimage = adjustImageURL(product.img)
             
             
         const card = document.createElement('div');
@@ -55,7 +19,7 @@ async function loadProducts() {
             <i class="fas fa-heart"><img src="/frontend/src/assets/images/icons/favorite.png" alt=""></i>
         </button>
         <!-- Product Image -->
-        <img src="${URLimage}" alt="${product.name}" class="rounded-lg w-full h-40 object-cover">
+        <img src="../../assets/images/${product.img}" alt="${product.name}" class="rounded-lg w-full h-40 object-cover">
         <!-- Product Info -->
         <div class="mt-4">
             <h2 class="text-lg font-semibold">${product.name}</h2>

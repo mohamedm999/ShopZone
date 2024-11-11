@@ -177,7 +177,7 @@
     "newCollection": true
   },
   {
-    "id": 22,
+    "id": 23,
     "name": "Leather Belt",
     "img": "VINTA _ S-Series Backpacks.jpg",
     "price": 1000,
@@ -193,5 +193,45 @@
     "description": "Ergonomic wireless mouse with precision control and a long battery life.",
     "category": "Electronics",
     "newCollection": true
+  },
+  {
+    "id": 25,
+    "name": "fgb",
+    "img": "jjj.png",
+    "price": 15,
+    "description": "yu67yuik",
+    "category": "something"
+  },
+  {
+    "id": 26,
+    "name": "mohamed",
+    "img": "jjj.png",
+    "price": 12,
+    "description": "tgyhjm",
+    "category": "something"
+  },
+  {
+    "id": 27,
+    "name": "mohamed",
+    "img": "14",
+    "price": 14,
+    "description": "fytghk",
+    "category": "something"
+  },
+  {
+    "id": 28,
+    "name": "mohamed",
+    "img": "jjj.png",
+    "price": 15,
+    "description": "tfr5t6y",
+    "category": "something"
+  },
+  {
+    "id": 29,
+    "name": "mohamed",
+    "img": "jjj.png",
+    "price": 15,
+    "description": "kygu-tèyuik",
+    "category": "something"
   }
 ]

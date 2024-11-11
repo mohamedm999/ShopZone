@@ -29,12 +29,12 @@ app.post('/addCategory', (req, res) => {
  
     fs.readFile('ProductData.json', 'utf8', (err, data) => {
       if (err) {
-        return res.status(500).json({ success: false, message: 'Error reading file' });
+        return res.status(500).json({ success: false, message: 'Error reading file json' });
       }
 
       const categories = JSON.parse(data);
 
-      const newId = categories[categories.length - 1 ].id + 1 ;
+      const newId = categories[categories.length].id + 1 ;
 
       const newCategory  = Object.assign({id:newId},req.body) ;
   
