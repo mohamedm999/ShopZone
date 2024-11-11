@@ -4,17 +4,17 @@ console.log(formAddCattegory)
 
 formAddCattegory.addEventListener('submit', event => {
 
-    event.preventDefault();  ;
+  event.preventDefault();;
 
-    const newCategory = {
-        name: document.getElementById('name').value,
-        img: document.getElementById('img').value,
-        price: parseFloat(document.getElementById('price').value),
-        description: document.getElementById('description').value,
-        category: document.getElementById('category').value
-    };
+  const newCategory = {
+    name: document.getElementById('name').value,
+    img: document.getElementById('img').value,
+    price: parseFloat(document.getElementById('price').value),
+    description: document.getElementById('description').value,
+    category: document.getElementById('category').value
+  };
 
-  
+
   fetch('http://localhost:3000/addCategory', {
     method: 'POST',
     headers: {
@@ -22,21 +22,21 @@ formAddCattegory.addEventListener('submit', event => {
     },
     body: JSON.stringify(newCategory) // Send the category data as a JSON string
   })
-  .then(response => response.json())
-  .then(data => {
+    .then(response => response.json())
+    .then(data => {
 
-    if (data.success) {
+      if (data.success) {
 
         alert('Category added successfully!');
- 
+
         document.getElementById('categoryForm').reset();
       } else {
         alert('Error adding category!');
       }
-  }
-  
-)
-  .catch(error => alert('Error adding category!') );
+    }
+
+    )
+    .catch(error => alert('Error adding category!'));
 
 })
 

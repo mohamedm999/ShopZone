@@ -7,8 +7,7 @@ async function loadProducts() {
       const container = document.getElementById('product-listing');
       
       products.forEach(product => {
-            
-            
+        
         const card = document.createElement('div');
         card.className = "flex flex-col md:flex-row justify-center items-center gap-4 p-4";
         
