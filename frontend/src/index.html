@@ -8,7 +8,7 @@
       href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
       rel="stylesheet"
     />
-    <script src="/backend/ListtingofProducts.js"></script>
+    <script src="./products.js"></script>
   </head>
   <body class="bg-gray-800">
     <!-- Navbar -->
@@ -35,36 +35,20 @@
         </div>
       </div>
 
-      <!-- Right Side: Shopping and Favorites Icons -->
-      <div class="flex items-center space-x-4">
-        <!-- Shopping Icon with Counter -->
-        <div class="relative">
-          <i class="fas fa-shopping-cart text-white text-xl p"
-            ><img
-              class="w-10"
-              src="/frontend/src/assets/images/icons/shopping-cart.png"
-              alt=""
-          /></i>
-          <span
-            class="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center"
-            >0</span
-          >
-        </div>
-        <!-- Favorites Icon with Counter -->
-        <div class="relative">
-          <i class="fas fa-heart text-white text-xl"
-            ><img
-              class="w-9"
-              src="/frontend/src/assets/images/icons/heart (2).png"
-              alt=""
-          /></i>
-          <span
-            class="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center"
-            >0</span
-          >
-        </div>
-      </div>
-    </nav>
+  <!-- Right Side: Shopping and Favorites Icons -->
+  <div class="flex items-center space-x-4">
+    <!-- Shopping Icon with Counter -->
+    <a class="relative" href="./assets/pages/basket.html">
+      <i class="fas fa-shopping-cart text-white text-xl p"><img class="w-10" src="/frontend/src/assets/images/icons/shopping-cart.png" alt=""></i>
+      <span class="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center">0</span>
+    </a>
+    <!-- Favorites Icon with Counter -->
+    <a class="relative" href="./assets/pages/favorite.html">
+      <i class="fas fa-heart text-white text-xl"><img class="w-9" src="/frontend/src/assets/images/icons/heart (2).png" alt=""></i>
+      <span class="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center">0</span>
+    </a>
+  </div>
+</nav>
 
     <!-- Subbar -->
     <div class="bg-gray-700 p-2">
