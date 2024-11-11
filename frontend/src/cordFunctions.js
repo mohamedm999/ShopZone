@@ -14,11 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
     let containerBasket = document.getElementById('containerBasket')
     let fatherContainer = document.getElementById('fatherContainer')
     const divCard = document.createElement('div');
+    let spanBasket = document.getElementById('spanBasket')
+    let numCard = parentData.length
+    spanBasket.textContent = numCard 
+  
 
     divCard.innerHTML = `
     <div class="flex justify-between border-b pb-8">
           <h1 class="font-semibold text-2xl">Shopping Cart</h1>
-          <h2 class="font-semibold text-2xl">${parentData.length} Items</h2>
+          <h2 class="font-semibold text-2xl">${numCard} Items</h2>
         </div>
     `
     fatherContainer.appendChild(divCard)
