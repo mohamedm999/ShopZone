@@ -1,10 +1,11 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/frontend/src/input.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <!-- <script src="/backend/ListtingofProducts.js"></script> -->
   <script src="products.js"></script>
  
 </head>
@@ -27,6 +28,7 @@
       <i class="fas fa-search absolute left-3 top-2 text-white"><img class="w-6" src="/frontend/src/assets/images/icons/magnifying-glass.png" alt=""></i>
     </div>
   </div>
+  
 
   <!-- Right Side: Shopping and Favorites Icons -->
   <div class="flex items-center space-x-4">
@@ -47,78 +49,156 @@
 <div class="bg-gray-700 p-2">
   <div class="flex space-x-10 justify-center">
     <a href="index.html" class="text-white hover:text-gray-400">Home</a>
-    <a href="./assets/pages/productList.html" class="text-white hover:text-gray-400">Product Listing</a>
-    <a href="#" class="text-white hover:text-gray-400">Product Categories</a>
-    <a href="#" class="text-white hover:text-gray-400">About Us</a>
+    <a href="/frontend/src/assets/pages/productList.html" class="text-white hover:text-gray-400">Product Listing</a>
+    <a href="/frontend/src/assets/pages/categories.html" class="text-white hover:text-gray-400">Product Categories</a>
+    <a href="/" class="text-white hover:text-gray-400">About Us</a>
     <a href="#" class="text-white hover:text-gray-400">Contact</a>
   </div>
 </div>
 
-  <!-- Cover Section -->
-<div class="relative bg-cover bg-center h-96" style="background-image: url('/frontend/src/assets/images/cover-image.jpg');">
-  <!-- Text Overlay -->
-  <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <h1 class="text-white text-4xl font-bold md:text-5xl lg:text-6xl">Our New Collection</h1>
-  </div>
-</div>
-
-<!-- hero section> -->
-<div id="product-container" class=" flex flex-wrap justify-center gap-6 p-6 bg-gray-100 bg-gray-800">
-
-
-</div>
-
-
-
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-10 px-6">
-  <div class="container mx-auto flex flex-col md:flex-row justify-between gap-8">
-    <!-- Logo and About Section -->
-    <div class="flex flex-col items-start">
-      <h2 class="text-2xl font-bold">ShopZone</h2>
-      <p class="mt-4 text-gray-400 max-w-sm">
-        Discover the latest collections of quality products and enjoy seamless shopping experiences.
-      </p>
-    </div>
-
-    <!-- Quick Links -->
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
-      <ul class="space-y-2">
-        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Home</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Shop</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Categories</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">About Us</a></li>
-        <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
-      </ul>
-    </div>
-
-    <!-- Contact Information -->
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
-      <p class="text-gray-400">1234 Market St.<br>San Francisco, CA 94103</p>
-      <p class="mt-4 text-gray-400">Email: support@shopzone.com</p>
-      <p class="text-gray-400">Phone: (123) 456-7890</p>
-    </div>
-
-    <!-- Social Media Links -->
-    <div>
-      <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
-      <div class="flex space-x-4">
-        <a href="#" class="text-gray-400 hover:text-blue-500 transition duration-300"><i class="fab fa-facebook"><img src="/frontend/src/assets/images/icons/facebook (1).png" alt=""></i></a>
-        <a href="#" class="text-gray-400 hover:text-pink-500 transition duration-300"><i class="fab fa-instagram"><img src="/frontend/src/assets/images/icons/instagram.png" alt=""></i></a>
-        <a href="#" class="text-gray-400 hover:text-blue-400 transition duration-300"><i class="fab fa-twitter"><img src="/frontend/src/assets/images/icons/twitter.png" alt=""></i></a>
-        <a href="#" class="text-gray-400 hover:text-red-600 transition duration-300"><i class="fab fa-youtube"><img src="/frontend/src/assets/images/icons/youtube.png" alt=""></i></a>
+    <!-- Cover Section with CTA -->
+    <div
+      class="relative bg-cover bg-center h-96"
+      style="
+        background-image: url('/frontend/src/assets/images/cover-image.jpg');
+      "
+    >
+      <div
+        class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center"
+      >
+        <h1 class="text-white text-4xl font-bold md:text-5xl lg:text-6xl mb-4">
+          Our New Collection
+        </h1>
+        <p class="text-gray-200 text-lg mb-8 text-center px-6 md:px-0">
+          Explore the latest trends and find your perfect style with ShopZone's
+          new arrivals.
+        </p>
+        <a
+          href="#"
+          class="bg-blue-500 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-600 transition duration-300"
+          >Shop Now</a
+        >
       </div>
     </div>
-  </div>
 
-  <!-- Footer Bottom -->
-  <div class="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm">
-    <p>&copy; 2024 ShopZone. All rights reserved.</p>
-  </div>
-</footer>
+    <!-- hero section> -->
+    <div
+      id="product-container"
+      class="flex flex-wrap justify-center gap-6 p-6 bg-gray-100 bg-gray-800"
+    ></div>
 
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10 px-6">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between gap-8"
+      >
+        <!-- Logo and About Section -->
+        <div class="flex flex-col items-start">
+          <h2 class="text-2xl font-bold">ShopZone</h2>
+          <p class="mt-4 text-gray-400 max-w-sm">
+            Discover the latest collections of quality products and enjoy
+            seamless shopping experiences.
+          </p>
+        </div>
 
-</body>
+        <!-- Quick Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+                >Shop</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+                >Categories</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Information -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Contact Us</h3>
+          <p class="text-gray-400">
+            1234 Market St.<br />San Francisco, CA 94103
+          </p>
+          <p class="mt-4 text-gray-400">Email: support@shopzone.com</p>
+          <p class="text-gray-400">Phone: (123) 456-7890</p>
+        </div>
+
+        <!-- Social Media Links -->
+        <div>
+          <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+          <div class="flex space-x-4">
+            <a
+              href="#"
+              class="text-gray-400 hover:text-blue-500 transition duration-300"
+              ><i class="fab fa-facebook"
+                ><img
+                  src="/frontend/src/assets/images/icons/facebook (1).png"
+                  alt="" /></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-pink-500 transition duration-300"
+              ><i class="fab fa-instagram"
+                ><img
+                  src="/frontend/src/assets/images/icons/instagram.png"
+                  alt="" /></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-blue-400 transition duration-300"
+              ><i class="fab fa-twitter"
+                ><img
+                  src="/frontend/src/assets/images/icons/twitter.png"
+                  alt="" /></i
+            ></a>
+            <a
+              href="#"
+              class="text-gray-400 hover:text-red-600 transition duration-300"
+              ><i class="fab fa-youtube"
+                ><img
+                  src="/frontend/src/assets/images/icons/youtube.png"
+                  alt="" /></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom -->
+      <div
+        class="mt-10 border-t border-gray-700 pt-6 text-center text-gray-500 text-sm"
+      >
+        <p>&copy; 2024 ShopZone. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
 </html>
