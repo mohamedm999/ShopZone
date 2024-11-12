@@ -11,7 +11,6 @@ async function getProducts() {
         localStorage.setItem('data', JSON.stringify(dataProduct))
     } catch (error) {
         console.log('Error fetching data:', error);
-        console.log('hello')
     }
     return dataProduct;
 }
