@@ -13,6 +13,7 @@ formAddCattegory.addEventListener('submit', event => {
         description: document.getElementById('description').value,
         category: document.getElementById('category').value
     };
+    console.log(newCategory)
 
   
   fetch('http://localhost:3000/addCategory', {
@@ -20,11 +21,11 @@ formAddCattegory.addEventListener('submit', event => {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify(newCategory) // Send the category data as a JSON string
+    body: JSON.stringify(newCategory) 
   })
   .then(response => response.json())
   .then(data => {
-
+    getProducts()
     if (data.success) {
 
         alert('Category added successfully!');
