@@ -8,14 +8,18 @@ async function getProducts() {
         }
         const data = await res.json();
         data.map(item => dataProduct.push(item));
+       
+        localStorage.setItem('data', JSON.stringify([]))
         localStorage.setItem('data', JSON.stringify(dataProduct))
+      
+       
     } catch (error) {
         console.log('Error fetching data:', error);
     }
     return dataProduct;
 }
+setTimeout(getProducts(), 500)
 
-getProducts()
 
 
 function adjustImageURL(img) {
