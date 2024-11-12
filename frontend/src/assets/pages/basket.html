@@ -7,6 +7,7 @@
   <link href="/frontend/src/input.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="/backend/ListtingofProducts.js"></script>
+  <link rel="stylesheet" href="style.css">
 
 </head>
 
@@ -36,6 +37,7 @@
         <span
           class="absolute top-0 right-0 rounded-full bg-red-500 text-white text-xs w-5 h-5 flex items-center justify-center" id="spanBasket"></span>
       </div>
+
       <!-- Favorites Icon with Counter -->
       <div class="relative">
         <i class="fas fa-heart text-white text-xl"><img class="w-9"
@@ -50,8 +52,8 @@
   <div class="bg-gray-700 p-2">
     <div class="flex space-x-10 justify-center">
       <a href="/frontend/src/index.html" class="text-white hover:text-gray-400">Home</a>
-      <a href="/frontend/src/assets/pages/productList.html" class="text-white hover:text-gray-400">Product Listing</a>
-      <a href="#" class="text-white hover:text-gray-400">Product Categories</a>
+      <a href="./productList.html" class="text-white hover:text-gray-400">Product Listing</a>
+      <a href="./categories.html" class="text-white hover:text-gray-400">Product Categories</a>
       <a href="#" class="text-white hover:text-gray-400">About Us</a>
       <a href="#" class="text-white hover:text-gray-400">Contact</a>
     </div>
@@ -78,33 +80,15 @@
         </a>
       </div>
       <div id="summary" class=" w-full   sm:w-1/4   md:w-1/2     px-8 py-10">
-        <h1 class="font-semibold text-2xl border-b pb-8">Order Summary</h1>
-        <div class="flex justify-between mt-10 mb-5">
-          <span class="font-semibold text-sm uppercase">Items 3</span>
-          <span class="font-semibold text-sm">590$</span>
-        </div>
-        <div>
-          <label class="font-medium inline-block mb-3 text-sm uppercase">
-            Shipping
-          </label>
-          <select class="block p-2 text-gray-600 w-full text-sm">
-            <option>Standard shipping - $10.00</option>
-          </select>
-        </div>
-        <div class="py-10">
-          <label for="promo" class="font-semibold inline-block mb-3 text-sm uppercase">
-            Promo Code
-          </label>
-          <input type="text" id="promo" placeholder="Enter your code" class="p-2 text-sm w-full" />
-        </div>
-        <button class="bg-red-500 hover:bg-red-600 px-5 py-2 text-sm text-white uppercase">
-          Apply
-        </button>
+        <h1 class="font-semibold text-2xl text-white">Order Summary</h1>
+  
         <div class="border-t mt-8">
-          <div class="flex font-semibold justify-between py-6 text-sm uppercase">
+          <div class="flex font-semibold justify-between py-6 text-sm uppercase text-white">
             <span>Total cost</span>
-            <span>$600</span>
+            <span id="sumTotalCost">$0</span>
           </div>
+        </div>
+        
           <button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">
             Checkout
           </button>
