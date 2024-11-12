@@ -43,5 +43,5 @@ async function loadProducts() {
       console.error("Failed to load products:", error);
     }
   }
-
-  document.addEventListener('DOMContentLoaded', loadProducts);
+  
+  document.addEventListener('DOMContentLoaded', loadProducts());

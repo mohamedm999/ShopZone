@@ -27,21 +27,21 @@ app.post('/addCategory', (req, res) => {
     // const newCategory = req.body; 
    
  
-    fs.readFile('ProductData.json', 'utf8', (err, data) => {
+    fs.readFile('ProductData.json', (err, data) => {
       if (err) {
         return res.status(500).json({ success: false, message: 'Error reading file json' });
       }
 
       const categories = JSON.parse(data);
-
-      const newId = categories[categories.length].id + 1 ;
-
+      const newId = categories.length + 1
+      
       const newCategory  = Object.assign({id:newId},req.body) ;
+      console.log(newCategory)
   
 
       categories.push(newCategory);
   
-      fs.writeFile(FILE_NAME, JSON.stringify(categories, null, 2), 'utf8', (err) => {
+      fs.writeFile(FILE_NAME, JSON.stringify(categories),(err) => {
           if (err) {
             return res.status(500).send("Error saving data");
           }

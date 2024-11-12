@@ -1,8 +1,13 @@
+let caseO = [];
+if(!localStorage.getItem('card')){
+  localStorage.setItem('card', JSON.stringify(caseO));
+}
+
 async function addToCard(itemId) {
     let itemChose ;
     const products = JSON.parse(localStorage.getItem('data'));
     itemChose = products.filter(item => {
-        return item.id === itemId
+    return item.id === itemId
     })
     let parentData = JSON.parse(localStorage.getItem('card'));
     parentData.push(itemChose[0]);
@@ -15,6 +20,9 @@ let spanBasket = document.getElementById('spanBasket')
 
 document.addEventListener('DOMContentLoaded', () => {
     let parentData = JSON.parse(localStorage.getItem('card'));
+    console.log(parentData)
+    let containerBasket = document.getElementById('containerBasket')
+    let fatherContainer = document.getElementById('fatherContainer')
     const divCard = document.createElement('div');
     let numCard = parentData.length
     spanBasket.textContent = numCard 
@@ -49,12 +57,18 @@ document.addEventListener('DOMContentLoaded', () => {
         <option>1</option>
         <option>2</option>
         <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+        <option>10</option>
       </select>
     </div>
 
     <div class="flex items-center justify-between pt-5">
       <div class="flex items-center">
-    
         <button class="text-xs leading-3 underline text-red-500 pl-5 cursor-pointer" onclick="removeProduct(${product.id})">Remove</button>
       </div>
       <p class="text-base font-black leading-none text-gray-800" id="affitotal${product.id}">${product.price} $</p>
@@ -69,51 +83,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
 })
-
-
-
-// function myFunction(price , id) {
-//   let text = document.getElementById("totalPrice"+id).value;
-//   document.getElementById("affitotal"+id).innerHTML = price * text +" $";
-// }
-
-// async function getProducts() {
-//   const dataProduct = [];
-//   try {
-//       const res = await fetch('http://localhost:3000/get-products');
-//       if (!res.ok) {
-//           console.log('error connect network');
-//           return dataProduct;
-//       }
-//       const data = await res.json();
-//       data.map(item => dataProduct.push(item));
-//       localStorage.setItem('data' , JSON.stringify(dataProduct))
-
-//   } catch (error) {
-//       console.log('Error fetching data:', error);
-//   }
-//   return dataProduct;
-// }
-
-
-// let products = getProducts();
-
-// function removeProduct(id){
-//     products.forEach(prd => {
-//         containerBasket.forEach(item => {
-//     if (id == prd.id) {
-//             item.remove();
-//         }
-//     })
-//   })
-// }
-
-
-function myFunction(price, id) {
-  let quantity = document.getElementById("totalPrice" + id).value;
+function myFunction(price,id) {
+  let quantity = document.getElementById("totalPrice"+ id).value;
   let itemTotal = price * quantity;
-  document.getElementById("affitotal" + id).innerHTML = itemTotal + " $";
-
+  document.getElementById("affitotal"+id).innerHTML = itemTotal + " $";
   updateTotalCost();
 }
 
@@ -123,11 +96,10 @@ function updateTotalCost() {
 
   parentData.forEach(product => {
     let quantity = document.getElementById("totalPrice" + product.id).value;
-    totalCost += product.price * quantity;
+    totalCost += product.price *quantity;
   });
 
- 
-  document.getElementById("summaryTotalCost").innerHTML = totalCost + " $";
+  document.getElementById("sumTotalCost").innerHTML = totalCost + " $";
 }
 
 document.addEventListener('DOMContentLoaded', () => {
